@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px; 
+    font-weight: bold;
+    color: black;
+}
+
+#main-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    gap: 30px; 
+    width: 90%; 
+    max-width: 1200px;
+}
+
+.same-line {
+    flex: 1 1 calc(50% - 20px); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box; 
+}
+
+.new-line {
+    flex: 1 1 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.cookie {
+    height: 300px;
+}
+
+.cookie:hover {
+    cursor: pointer; 
+    transform: scale(1.05);
+    transition: transform 0.2s;
+}
+
+.cl-autoclicker-img {
+    width: 15px;
+    padding-right: 5px;
+}
+
+.cl-grandma-img {
+    width: 25px;
+    padding-right: 5px;
+}
+
+.cl-farm-img {
+    width: 25px;
+    padding-right: 5px;
+}
+
+.cl-mine-img {
+    width: 25px;
+    padding-right: 5px;
+}
+
+.cl-factory-img {
+    width: 25px;
+    padding-right: 5px;
+}
