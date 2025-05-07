@@ -1,56 +1,109 @@
 <!DOCTYPE html>
 <HTML lang="en">
+
 <head>
     <title>Cookie Clicker Clone</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
 </head>
+
 <body>
     <div id="main-container">
         <div class="same-line" id="cookie-container">
             <p id="cookiesCount">Cookies: 0</p>
-            <p id="cps"></p>
+            <p id="cps">Cookies per second: 0</p>
             <img class="cookie" id="cookie" src="images\cookie.png">
         </div>
+
         <div class="same-line" id="Buildings-container">
             <p id="Buildings">Buildings</p>
+
             <div id="autoclicker-div">
-                <p id="autoclicker"><span><img class="cl-autoclicker-img" id="id-autoclicker-img" src="images\autoclicker.png"></span>Auto Clicker</p>
+                <p id="autoclicker"><span><img class="building-img" id="id-autoclicker-img"
+                            src="images\autoclicker.png"></span>Auto Clicker</p>
                 <p id="autoclickers-owned">Owned: 0</p>
                 <p id="autoclicker-cost">Cost: 10</p>
                 <button id="id-autoclicker-buy" class="cl-autoclicker-buy">Buy</button>
             </div>
+
             <div id="grandma-div">
-                <p id="grandma"><span><img class="cl-grandma-img" id="id-grandma-img" src="images\grandma.png"></span>Grandma</p>
+                <p id="grandma"><span><img class="building-img" id="id-grandma-img"
+                            src="images\grandma.png"></span>Grandma</p>
                 <p id="grandmas-owned">Owned: 0</p>
                 <p id="grandma-cost">Cost: 100</p>
                 <button id="id-grandma-buy" class="cl-grandma-buy">Buy</button>
             </div>
+
             <div id="farm-div">
-                <p id="farm"><span><img class="cl-farm-img" id="id-farm-img" src="images\farm.png"></span>Farm</p>
+                <p id="farm"><span><img class="building-img" id="id-farm-img" src="images\farm.png"></span>Farm</p>
                 <p id="farms-owned">Owned: 0</p>
                 <p id="farm-cost">Cost: 1000</p>
                 <button id="id-farm-buy" class="cl-farm-buy">Buy</button>
             </div>
+
             <div id="mine-div">
-                <p id="mine"><span><img class="cl-mine-img" id="id-mine-img" src="images\mine.png"></span>Mine</p>
+                <p id="mine"><span><img class="building-img" id="id-mine-img" src="images\mine.png"></span>Mine</p>
                 <p id="mines-owned">Owned: 0</p>
                 <p id="mine-cost">Cost: 10000</p>
                 <button id="id-mine-buy" class="cl-mine-buy">Buy</button>
             </div>
+
             <div id="factory-div">
-                <p id="factory"><span><img class="cl-factory-img" id="id-factory-img" src="images\factory.png"></span>Factory</p>
+                <p id="factory"><span><img class="building-img" id="id-factory-img"
+                            src="images\factory.png"></span>Factory</p>
                 <p id="factories-owned">Owned: 0</p>
                 <p id="factory-cost">Cost: 100000</p>
                 <button id="id-factory-buy" class="cl-factory-buy">Buy</button>
             </div>
         </div>
+
         <div class="new-line" id="upgrades-container">
             <p id="Upgrades">Upgrades</p>
+
+            <div id="autoclicker-upgrade-div">
+                <p id="autoclicker-upgrade"><span><img class="building-img" id="id-autoclicker-upgrade-img"
+                            src="images\autoclicker-upgrade.png"></span>Clicker Upgrade</p>
+                <p id="autoclicker-upgrades-owned">Owned: 0</p>
+                <p id="autoclicker-upgrade-cost">Cost: 100</p>
+                <button id="id-autoclicker-upgrade-buy" class="cl-autoclicker-upgrade-buy">Buy</button>
+            </div>
+
+            <div id="grandma-upgrade-div">
+                <p id="grandma-upgrade"><span><img class="building-img" id="id-grandma-upgrade-img"
+                            src="images\grandma-upgrade.png"></span>Grandma Upgrade</p>
+                <p id="grandma-upgrades-owned">Owned: 0</p>
+                <p id="grandma-upgrade-cost">Cost: 1000</p>
+                <button id="id-grandma-upgrade-buy" class="cl-grandma-upgrade-buy">Buy</button>
+            </div>
+
+            <div id="farm-upgrade-div">
+                <p id="farm-upgrade"><span><img class="building-img" id="id-farm-upgrade-img"
+                            src="images\farm-upgrade.png"></span>Farm Upgrade</p>
+                <p id="farm-upgrades-owned">Owned: 0</p>
+                <p id="farm-upgrade-cost">Cost: 10000</p>
+                <button id="id-farm-upgrade-buy" class="cl-farm-upgrade-buy">Buy</button>
+            </div>
+
+            <div id="mine-upgrade-div">
+                <p id="mine-upgrade"><span><img class="building-img" id="id-mine-upgrade-img"
+                            src="images\mine-upgrade.png"></span>Mine Upgrade</p>
+                <p id="mine-upgrades-owned">Owned: 0</p>
+                <p id="mine-upgrade-cost">Cost: 100000</p>
+                <button id="id-mine-upgrade-buy" class="cl-mine-upgrade-buy">Buy</button>
+            </div>
+
+            <div id="factory-upgrade-div">
+                <p id="factory-upgrade"><span><img class="building-img" id="id-factory-upgrade-img"
+                            src="images\factory-upgrade.png"></span>Factory Upgrade</p>
+                <p id="factory-upgrades-owned">Owned: 0</p>
+                <p id="factory-upgrade-cost">Cost: 1000000</p>
+                <button id="id-factory-upgrade-buy" class="cl-factory-upgrade-buy">Buy</button>
+            </div>
         </div>
     </div>
-    
+
     <script src="script.js"></script>
 </body>
+
 </HTML>
