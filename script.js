@@ -27,7 +27,84 @@ function generateCookies() {
     document.getElementById("cookiesCount").innerText = "Cookies: " + cookies;
 }
 
-setInterval(generateCookies, 100);
+function saveGame() {
+    const gameState = {
+        cookies: cookies,
+        cookiesPerClick: cookiesPerClick,
+        cookiesPerSecond: cookiesPerSecond,
+        autoclickers: autoclickers,
+        autoclickerCost: autoclickerCost,
+        autoclickerMultiplier: autoclickerMultiplier,
+        grandmas: grandmas,
+        grandmaCost: grandmaCost,
+        grandmaMultiplier: grandmaMultiplier,
+        farms: farms,
+        farmCost: farmCost,
+        farmMultiplier: farmMultiplier,
+        mines: mines,
+        mineCost: mineCost,
+        mineMultiplier: mineMultiplier,
+        factories: factories,
+        factoryCost: factoryCost,
+        factoryMultiplier: factoryMultiplier
+    };
+    localStorage.setItem('cookieClickerSave', JSON.stringify(gameState));
+}
+
+setInterval(generateCookies, 1000);
+setInterval(saveGame, 30000);
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === "s") {
+        saveGame();
+        alert("Game saved!");   
+    }
+
+    if (event.key === "l") {
+        loadGame();
+        alert("Game loaded!");   
+    }
+});
+
+function loadGame() {
+    const parsedGame = JSON.parse(localStorage.getItem('cookieClickerSave'));
+    if (parsedGame) {
+        cookies = parsedGame.cookies;
+        cookiesPerClick = parsedGame.cookiesPerClick;
+        cookiesPerSecond = parsedGame.cookiesPerSecond;
+        autoclickers = parsedGame.autoclickers;
+        autoclickerCost = parsedGame.autoclickerCost;
+        autoclickerMultiplier = parsedGame.autoclickerMultiplier;
+        grandmas = parsedGame.grandmas;
+        grandmaCost = parsedGame.grandmaCost;
+        grandmaMultiplier = parsedGame.grandmaMultiplier;
+        farms = parsedGame.farms;
+        farmCost = parsedGame.farmCost;
+        farmMultiplier = parsedGame.farmMultiplier;
+        mines = parsedGame.mines;
+        mineCost = parsedGame.mineCost;
+        mineMultiplier = parsedGame.mineMultiplier;
+        factories = parsedGame.factories;
+        factoryCost = parsedGame.factoryCost;
+        factoryMultiplier = parsedGame.factoryMultiplier;
+        updateDisplays();
+    }
+}
+
+function updateDisplays() {
+    document.getElementById("cookiesCount").innerText = "Cookies: " + cookies;
+    document.getElementById("cps").innerText = "Cookies per second: " + cookiesPerSecond;
+    document.getElementById("autoclicker-cost").innerText = "Cost: " + autoclickerCost;
+    document.getElementById("autoclickers-owned").innerText = "Owned: " + autoclickers;
+    document.getElementById("grandma-cost").innerText = "Cost: " + grandmaCost;
+    document.getElementById("grandmas-owned").innerText = "Owned: " + grandmas;
+    document.getElementById("farm-cost").innerText = "Cost: " + farmCost;
+    document.getElementById("farms-owned").innerText = "Owned: " + farms;
+    document.getElementById("mine-cost").innerText = "Cost: " + mineCost;
+    document.getElementById("mines-owned").innerText = "Owned: " + mines;
+    document.getElementById("factory-cost").innerText = "Cost: " + factoryCost;
+    document.getElementById("factories-owned").innerText = "Owned: " + factories;
+}
 
 document.getElementById("cookie").onclick = function() {
     cookies += cookiesPerClick;
@@ -107,3 +184,5 @@ document.getElementById("id-factory-buy").onclick = function() {
         document.getElementById("factories-owned").innerText = "Owned: " + factories;
     } 
 }
+
+window.onload = loadGame();
